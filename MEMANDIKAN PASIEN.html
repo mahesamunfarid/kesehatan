@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEMANDIKAN PASIEN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .note {
+            font-style: italic;
+            color: #555;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .footer {
+            margin-top: 20px;
+        }
+        .footer label {
+            display: inline-block;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>MEMANDIKAN PASIEN</h2>
+        <form id="formMemandikanPasien">
+            <div class="form-group">
+                <label for="namaPerawat">Nama Perawat:</label>
+                <input type="text" id="namaPerawat" name="namaPerawat">
+            </div>
+            <div class="form-group">
+                <label for="nip">NIP:</label>
+                <input type="text" id="nip" name="nip">
+            </div>
+            <div class="form-group">
+                <label for="ruangan">Ruangan:</label>
+                <input type="text" id="ruangan" name="ruangan">
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Uraian</th>
+                        <th>Dilakukan</th>
+                        <th>Tidak dilakukan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Mengecek rekam medik pasien untuk memastikan pasien akan mendapatkan transfusi</td>
+                        <td><input type="checkbox" id="dilakukan1"></td>
+                        <td><input type="checkbox" id="tidakDilakukan1"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><strong>Persiapan Alat</strong></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Standar baskom dengan 2 buah baskom berisi air hangat – hangat kuku</td>
+                        <td><input type="checkbox" id="dilakukan2"></td>
+                        <td><input type="checkbox" id="tidakDilakukan2"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Waslap 2 buah</td>
+                        <td><input type="checkbox" id="dilakukan3"></td>
+                        <td><input type="checkbox" id="tidakDilakukan3"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Sabun mandi</td>
+                        <td><input type="checkbox" id="dilakukan4"></td>
+                        <td><input type="checkbox" id="tidakDilakukan4"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Handuk</td>
+                        <td><input type="checkbox" id="dilakukan5"></td>
+                        <td><input type="checkbox" id="tidakDilakukan5"></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Selimut mandi (bila diperlukan)</td>
+                        <td><input type="checkbox" id="dilakukan6"></td>
+                        <td><input type="checkbox" id="tidakDilakukan6"></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Lotion atau sejenisnya jika diperlukan</td>
+                        <td><input type="checkbox" id="dilakukan7"></td>
+                        <td><input type="checkbox" id="tidakDilakukan7"></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Pakaian bersih klien</td>
+                        <td><input type="checkbox" id="dilakukan8"></td>
+                        <td><input type="checkbox" id="tidakDilakukan8"></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Sarung tangan bersih</td>
+                        <td><input type="checkbox" id="dilakukan9"></td>
+                        <td><input type="checkbox" id="tidakDilakukan9"></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Sampiran atau scherm</td>
+                        <td><input type="checkbox" id="dilakukan10"></td>
+                        <td><input type="checkbox" id="tidakDilakukan10"></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Mengucapkan salam</td>
+                        <td><input type="checkbox" id="dilakukan11"></td>
+                        <td><input type="checkbox" id="tidakDilakukan11"></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Memperkenalkan diri</td>
+                        <td><input type="checkbox" id="dilakukan12"></td>
+                        <td><input type="checkbox" id="tidakDilakukan12"></td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Melakukan hand hygiene sesuai prosedur</td>
+                        <td><input type="checkbox" id="dilakukan13"></td>
+                        <td><input type="checkbox" id="tidakDilakukan13"></td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>Menjelaskan prosedur tindakan yang akan dilakukan</td>
+                        <td><input type="checkbox" id="dilakukan14"></td>
+                        <td><input type="checkbox" id="tidakDilakukan14"></td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>Mengatur posisi pasien yang nyaman</td>
+                        <td><input type="checkbox" id="dilakukan15"></td>
+                        <td><input type="checkbox" id="tidakDilakukan15"></td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>Menjaga privasi pasien, dengan menutup gordyn atau sampiran</td>
+                        <td><input type="checkbox" id="dilakukan16"></td>
+                        <td><input type="checkbox" id="tidakDilakukan16"></td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>Menggunakan sarung tangan</td>
+                        <td><input type="checkbox" id="dilakukan17"></td>
+                        <td><input type="checkbox" id="tidakDilakukan17"></td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>Menjelaskan kepada klien bila ingin BAB atau BAK</td>
+                        <td><input type="checkbox" id="dilakukan18"></td>
+                        <td><input type="checkbox" id="tidakDilakukan18"></td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>Memindahkan bantal atau guling yang tidak dipakai, bila ada</td>
+                        <td><input type="checkbox" id="dilakukan19"></td>
+                        <td><input type="checkbox" id="tidakDilakukan19"></td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>Mengaturan posisi yang nyaman</td>
+                        <td><input type="checkbox" id="dilakukan20"></td>
+                        <td><input type="checkbox" id="tidakDilakukan20"></td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>Memasang selimut mandi dengan cara, bagian atas selimut mandi dipegang oleh klien, bagian bawah selimut mandi ditarik bersama dengan boven lakaen kebagian kaki oleh perawat</td>
+                        <td><input type="checkbox" id="dilakukan21"></td>
+                        <td><input type="checkbox" id="tidakDilakukan21"></td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>Menenaggalkan pakaian klien bagian atas dan masukkan ke tempat pakaian kotor</td>
+                        <td><input type="checkbox" id="dilakukan22"></td>
+                        <td><input type="checkbox" id="tidakDilakukan22"></td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td>Bila salah satu ekstremitas luka atau mengalami penurunan kemampuan pergerakan, mulai menggalkan pakaian dari ekstremitas yang sehat</td>
+                        <td><input type="checkbox" id="dilakukan23"></td>
+                        <td><input type="checkbox" id="tidakDilakukan23"></td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td>Bila ada selang infus angkat pakaian dari lengan yang tidak ada infus, kemudian turunkan botol selang / botol infus untuk dikeluarkan. Periksa kembali kecepatan tetesan dan posisi jarum</td>
+                        <td><input type="checkbox" id="dilakukan24"></td>
+                        <td><input type="checkbox" id="tidakDilakukan24"></td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>Meninggikan bagian kepala tempat tidur</td>
+                        <td><input type="checkbox" id="dilakukan25"></td>
+                        <td><input type="checkbox" id="tidakDilakukan25"></td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>Membentangkan handuk di atas dada klien</td>
+                        <td><input type="checkbox" id="dilakukan26"></td>
+                        <td><input type="checkbox" id="tidakDilakukan26"></td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td>Membasahin waslap</td>
+                        <td><input type="checkbox" id="dilakukan27"></td>
+                        <td><input type="checkbox" id="tidakDilakukan27"></td>
+                    </tr>
+                    <tr>
+                        <td>28</td>
+                        <td>Membasahkan muka, telinga, dan leher klien dengan menggunakan waslap yang sudah dibasahi</td>
+                        <td><input type="checkbox" id="dilakukan28"></td>
+                        <td><input type="checkbox" id="tidakDilakukan28"></td>
+                    </tr>
+                    <tr>
+                        <td>29</td>
+                        <td>Melakukan klarifikasi kepada klien apakah mau menggunakan sabun atau tidak, jika ya mulai mencuci muka, telinga sampai leher dengan sabun, kemudian membersihkan muka, telinga, dan leher dengan waslap yang telah dibasahi dengan air bersih</td>
+                        <td><input type="checkbox" id="dilakukan29"></td>
+                        <td><input type="checkbox" id="tidakDilakukan29"></td>
+                    </tr>
+                    <tr>
+                        <td>30</td>
+                        <td>Mengeringkan muka, telinga dan leher klien</td>
+                        <td><input type="checkbox" id="dilakukan30"></td>
+                        <td><input type="checkbox" id="tidakDilakukan30"></td>
+                    </tr>
+                    <tr>
+                        <td>31</td>
+                        <td>Memindahkan handuk dari dada ke bawah lengan yang terjauh, lalu bersihkan tangan dari jari sampai ketiak (jari-jari tangan dibasuh dalam baskom bila perlu)</td>
+                        <td><input type="checkbox" id="dilakukan31"></td>
+                        <td><input type="checkbox" id="tidakDilakukan31"></td>
+                    </tr>
+                    <tr>
+                        <td>32</td>
+                        <td>Mengeringkan tangan dan jari-jari tangan dengan handuk dan tutup dengan selimut mandi</td>
+                        <td><input type="checkbox" id="dilakukan32"></td>
+                        <td><input type="checkbox" id="tidakDilakukan32"></td>
+                    </tr>
+                    <tr>
+                        <td>33</td>
+                        <td>Membersihkan lengan yang lain dengan cara yang sama</td>
+                        <td><input type="checkbox" id="dilakukan33"></td>
+                        <td><input type="checkbox" id="tidakDilakukan33"></td>
+                    </tr>
+                    <tr>
+                        <td>34</td>
+                        <td>Meletakkan kedua tangan klien ke sisi kepala klien dan disokong bila perlu, jika tidak memungkinkan lengan diletakkan menjauh dari badan</td>
+                        <td><input type="checkbox" id="dilakukan34"></td>
+                        <td><input type="checkbox" id="tidakDilakukan34"></td>
+                    </tr>
+                    <tr>
+                        <td>35</td>
+                        <td>Menurunkan selimut mandi sampai perut bawah</td>
+                        <td><input type="checkbox" id="dilakukan35"></td>
+                        <td><input type="checkbox" id="tidakDilakukan35"></td>
+                    </tr>
+                    <tr>
+                        <td>36</td>
+                        <td>Membentangkan handuk di atas dada dan perut</td>
+                        <td><input type="checkbox" id="dilakukan36"></td>
+                        <td><input type="checkbox" id="tidakDilakukan36"></td>
+                    </tr>
+                    <tr>
+                        <td>37</td>
+                        <td>Membersihkan dada dan perut sampai bersih dan mengeringkan. Pada wanita: memperhatikan kebersihan pada bagian bawah payudara</td>
+                        <td><input type="checkbox" id="dilakukan37"></td>
+                        <td><input type="checkbox" id="tidakDilakukan37"></td>
+                    </tr>
+                    <tr>
+                        <td>38</td>
+                        <td>Menaikkan selimut mandi sampai menutupi dada</td>
+                        <td><input type="checkbox" id="dilakukan38"></td>
+                        <td><input type="checkbox" id="tidakDilakukan38"></td>
+                    </tr>
+                    <tr>
+                        <td>39</td>
+                        <td>Mengganti air dalam baskom (kalau perlu) dan mencuci waslap</td>
+                        <td><input type="checkbox" id="dilakukan39"></td>
+                        <td><input type="checkbox" id="tidakDilakukan39"></td>
+                    </tr>
+                    <tr>
+                        <td>40</td>
+                        <td>Menanggalkan pakaian bawah dan memasukkan ke tempat pakaian kotor</td>
+                        <td><input type="checkbox" id="dilakukan40"></td>
+                        <td><input type="checkbox" id="tidakDilakukan40"></td>
+                    </tr>
+                    <tr>
+                        <td>41</td>
+                        <td>Membentangkan handuk di bawah tungkai yang paling jauh dengan posisi di tekuk</td>
+                        <td><input type="checkbox" id="dilakukan41"></td>
+                        <td><input type="checkbox" id="tidakDilakukan41"></td>
+                    </tr>
+                    <tr>
+                        <td>42</td>
+                        <td>Membersihkan kaki mulai dari jari kaki sampai ke pangkal paha lalu keringkan, jika memungkinkan masukkan telapak kaki ke dalam baskom yang berisi air hangat sambil dibilas</td>
+                        <td><input type="checkbox" id="dilakukan42"></td>
+                        <td><input type="checkbox" id="tidakDilakukan42"></td>
+                    </tr>
+                    <tr>
+                        <td>43</td>
+                        <td>Membersihkan kaki yang lain dengan cara yang sama</td>
+                        <td><input type="checkbox" id="dilakukan43"></td>
+                        <td><input type="checkbox" id="tidakDilakukan43"></td>
+                    </tr>
+                    <tr>
+                        <td>44</td>
+                        <td>Memiringkan pasien atau telungkup dan membentangkan handuk di bawah punggung</td>
+                        <td><input type="checkbox" id="dilakukan44"></td>
+                        <td><input type="checkbox" id="tidakDilakukan44"></td>
+                    </tr>
+                    <tr>
+                        <td>45</td>
+                        <td>Membersihkan tengkuk, punggung, sampai bokong dan pengeringannya (perhatikan kebersihan lipatan bokong dan anus)</td>
+                        <td><input type="checkbox" id="dilakukan45"></td>
+                        <td><input type="checkbox" id="tidakDilakukan45"></td>
+                    </tr>
+                    <tr>
+                        <td>46</td>
+                        <td>Memberikan lotion pada kuduk, punggung dan bokong</td>
+                        <td><input type="checkbox" id="dilakukan46"></td>
+                        <td><input type="checkbox" id="tidakDilakukan46"></td>
+                    </tr>
+                    <tr>
+                        <td>47</td>
+                        <td>Melakukan massage mulai dari bokong, tengkuk dengan gerakan memutar</td>
+                        <td><input type="checkbox" id="dilakukan47"></td>
+                        <td><input type="checkbox" id="tidakDilakukan47"></td>
+                    </tr>
+                    <tr>
+                        <td>48</td>
+                        <td>Memakaikan pakaian bagian atas yang bersih kemudian memberi posisi telentang</td>
+                        <td><input type="checkbox" id="dilakukan48"></td>
+                        <td><input type="checkbox" id="tidakDilakukan48"></td>
+                    </tr>
+                    <tr>
+                        <td>49</td>
+                        <td>Membentangkan handuk di bawah bokong</td>
+                        <td><input type="checkbox" id="dilakukan49"></td>
+                        <td><input type="checkbox" id="tidakDilakukan49"></td>
+                    </tr>
+                    <tr>
+                        <td>50</td>
+                        <td>Membersihkan genitalia dan sekitarnya sampai dengan lipat paha, lalu keringkan</td>
+                        <td><input type="checkbox" id="dilakukan50"></td>
+                        <td><input type="checkbox" id="tidakDilakukan50"></td>
+                    </tr>
+                    <tr>
+                        <td>51</td>
+                        <td>Memakaikan pakaian bawah klien yang bersih</td>
+                        <td><input type="checkbox" id="dilakukan51"></td>
+                        <td><input type="checkbox" id="tidakDilakukan51"></td>
+                    </tr>
+                    <tr>
+                        <td>52</td>
+                        <td>Merapihkan tempat tidur dan pengembalian alat-alat pada tempatnya</td>
+                        <td><input type="checkbox" id="dilakukan52"></td>
+                        <td><input type="checkbox" id="tidakDilakukan52"></td>
+                    </tr>
+                    <tr>
+                        <td>53</td>
+                        <td>Memberikan reinforcement positif kepada klien atas kerjasamanya</td>
+                        <td><input type="checkbox" id="dilakukan53"></td>
+                        <td><input type="checkbox" id="tidakDilakukan53"></td>
+                    </tr>
+                    <tr>
+                        <td>54</td>
+                        <td>Melakukan hand hygiene sesuai SPO</td>
+                        <td><input type="checkbox" id="dilakukan54"></td>
+                        <td><input type="checkbox" id="tidakDilakukan54"></td>
+                    </tr>
+                    <tr>
+                        <td>55</td>
+                        <td>Mendokumentasian tindakan dan respon pasien</td>
+                        <td><input type="checkbox" id="dilakukan55"></td>
+                        <td><input type="checkbox" id="tidakDilakukan55"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="result">
+                <p>SKOR: <span id="skor">0</span></p>
+            </div>
+
+            <div class="footer">
+                <label for="tanggal">Tanggal:</label>
+                <input type="text" id="tanggal" name="tanggal">
+                <label for="namaPerawatSupervisi">Nama Perawat yang melakukan supervisi:</label>
+                <input type="text" id="namaPerawatSupervisi" name="namaPerawatSupervisi">
+            </div>
+
+            <button type="button" class="button" onclick="calculateScore()">Hitung Skor</button>
+        </form>
+    </div>
+
+    <script>
+        function calculateScore() {
+            const totalItems = 55;
+            let dilakukanCount = 0;
+
+            for (let i = 1; i <= totalItems; i++) {
+                const dilakukan = document.getElementById(`dilakukan${i}`);
+                if (dilakukan && dilakukan.checked) {
+                    dilakukanCount++;
+                }
+            }
+
+            const score = (dilakukanCount / totalItems) * 100;
+            document.getElementById('skor').textContent = score.toFixed(2) + '%';
+        }
+    </script>
+</body>
+</html>

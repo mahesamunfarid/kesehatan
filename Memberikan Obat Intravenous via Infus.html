@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulir Memberikan Obat Intravenosa via Infus</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Formulir Memberikan Obat Intravenosa via Infus</h2>
+<form onsubmit="return hitungSkor()">
+    <label for="namaPerawat">Nama Perawat:</label><br>
+    <input type="text" id="namaPerawat" name="namaPerawat"><br><br>
+
+    <label for="nip">NIP:</label><br>
+    <input type="text" id="nip" name="nip"><br><br>
+
+    <label for="ruangan">Ruangan:</label><br>
+    <input type="text" id="ruangan" name="ruangan"><br><br>
+
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Uraian</th>
+            <th>Dilakukan</th>
+            <th>Tidak Dilakukan</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Mengecek rekam medik pasien untuk melihat instruksi pemberian obat</td>
+            <td><input type="checkbox" name="uraian1_dilakukan"></td>
+            <td><input type="checkbox" name="uraian1_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td colspan="4"><b>Persiapan Alat</b></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Obat sesuai order</td>
+            <td><input type="checkbox" name="uraian2_dilakukan"></td>
+            <td><input type="checkbox" name="uraian2_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Swab alkohol</td>
+            <td><input type="checkbox" name="uraian3_dilakukan"></td>
+            <td><input type="checkbox" name="uraian3_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Bak spuit</td>
+            <td><input type="checkbox" name="uraian4_dilakukan"></td>
+            <td><input type="checkbox" name="uraian4_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Bengkok</td>
+            <td><input type="checkbox" name="uraian5_dilakukan"></td>
+            <td><input type="checkbox" name="uraian5_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Safety box</td>
+            <td><input type="checkbox" name="uraian6_dilakukan"></td>
+            <td><input type="checkbox" name="uraian6_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Menyiapkan obat: benar obat, benar dosis</td>
+            <td><input type="checkbox" name="uraian7_dilakukan"></td>
+            <td><input type="checkbox" name="uraian7_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Memperhatikan teknik aseptik penyiapan obat</td>
+            <td><input type="checkbox" name="uraian8_dilakukan"></td>
+            <td><input type="checkbox" name="uraian8_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Menempatkan spuit obat dalam bak spuit</td>
+            <td><input type="checkbox" name="uraian9_dilakukan"></td>
+            <td><input type="checkbox" name="uraian9_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Mengucapkan salam</td>
+            <td><input type="checkbox" name="uraian10_dilakukan"></td>
+            <td><input type="checkbox" name="uraian10_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Memperkenalkan diri</td>
+            <td><input type="checkbox" name="uraian11_dilakukan"></td>
+            <td><input type="checkbox" name="uraian11_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Melakukan hand hygiene sesuai prosedur</td>
+            <td><input type="checkbox" name="uraian12_dilakukan"></td>
+            <td><input type="checkbox" name="uraian12_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>Menjelaskan prosedur tindakan yang akan dilakukan</td>
+            <td><input type="checkbox" name="uraian13_dilakukan"></td>
+            <td><input type="checkbox" name="uraian13_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>Mengatur posisi pasien yang nyaman</td>
+            <td><input type="checkbox" name="uraian14_dilakukan"></td>
+            <td><input type="checkbox" name="uraian14_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>Menutup klem infus</td>
+            <td><input type="checkbox" name="uraian15_dilakukan"></td>
+            <td><input type="checkbox" name="uraian15_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>Membuka tutup injection port dan lakukan desinfeksi dengan swab alkohol</td>
+            <td><input type="checkbox" name="uraian16_dilakukan"></td>
+            <td><input type="checkbox" name="uraian16_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>Membuka jarum spuit yang berisi obat, hubungkan spuit dengan injection port</td>
+            <td><input type="checkbox" name="uraian17_dilakukan"></td>
+            <td><input type="checkbox" name="uraian17_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>Mendorong obat yang ada dalam spuit secara perlahan dan observasi adanya tanda-tanda reaksi obat. Bila terjadi reaksi pemberian obat maka hentikan pemberian obat dan laporkan ke dokter</td>
+            <td><input type="checkbox" name="uraian18_dilakukan"></td>
+            <td><input type="checkbox" name="uraian18_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>Melepaskan spuit dari injection port bila obat sudah semua diinjeksikan</td>
+            <td><input type="checkbox" name="uraian19_dilakukan"></td>
+            <td><input type="checkbox" name="uraian19_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>Melakukan desinfeksi pada injection port kemudian tutup</td>
+            <td><input type="checkbox" name="uraian20_dilakukan"></td>
+            <td><input type="checkbox" name="uraian20_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>Mengatur kembali tetesan infus sesuai program</td>
+            <td><input type="checkbox" name="uraian21_dilakukan"></td>
+            <td><input type="checkbox" name="uraian21_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>Mengobservasi reaksi alergi terkait pemberian obat</td>
+            <td><input type="checkbox" name="uraian22_dilakukan"></td>
+            <td><input type="checkbox" name="uraian22_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>23</td>
+            <td>Membuang jarum ke safety box dan buang spuit ke tempat sampah infeksius</td>
+            <td><input type="checkbox" name="uraian23_dilakukan"></td>
+            <td><input type="checkbox" name="uraian23_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>24</td>
+            <td>Merapikan peralatan, pasien dan lingkungan</td>
+            <td><input type="checkbox" name="uraian24_dilakukan"></td>
+            <td><input type="checkbox" name="uraian24_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>Memantau kondisi pasien selama tindakan</td>
+            <td><input type="checkbox" name="uraian25_dilakukan"></td>
+            <td><input type="checkbox" name="uraian25_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>26</td>
+            <td>Melakukan hand hygiene sesuai SPO</td>
+            <td><input type="checkbox" name="uraian26_dilakukan"></td>
+            <td><input type="checkbox" name="uraian26_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>27</td>
+            <td>Mendokumentasian tindakan dan respon pasien</td>
+            <td><input type="checkbox" name="uraian27_dilakukan"></td>
+            <td><input type="checkbox" name="uraian27_tidak_dilakukan"></td>
+        </tr>
+    </table><br>
+
+    <label for="skor">SKOR :</label><br>
+    <p id="skor">* = (Total Skor : 27) x 100</p><br>
+
+    <label for="tanggal">Tanggal:</label><br>
+    <input type="date" id="tanggal" name="tanggal"><br><br>
+
+    <label for="namaSupervisi">Nama Perawat yang melakukan supervisi:</label><br>
+    <input type="text" id="namaSupervisi" name="namaSupervisi"><br><br>
+
+    <input type="submit" value="Hitung Skor">
+</form>
+
+<script>
+    function hitungSkor() {
+        const totalItems = 27;
+        let dilakukanCount = 0;
+        
+        for (let i = 1; i <= totalItems; i++) {
+            const checkboxDilakukan = document.querySelector(`input[name="uraian${i}_dilakukan"]`);
+            if (checkboxDilakukan && checkboxDilakukan.checked) {
+                dilakukanCount++;
+            }
+        }
+
+        const skor = (dilakukanCount / totalItems) * 100;
+        document.getElementById("skor").innerText = `SKOR: ${skor.toFixed(2)}`;
+        
+        return false;  // Mencegah form dari pengiriman
+    }
+</script>
+
+</body>
+</html>

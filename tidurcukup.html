@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOMUNIKASI SBAR TBAK</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .note {
+            font-style: italic;
+            color: #555;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>KOMUNIKASI SBAR TBAK</h2>
+        <form id="formIdentitas">
+            <div class="form-group">
+                <label for="namaPerawat">Nama Perawat:</label>
+                <input type="text" id="namaPerawat" name="namaPerawat">
+            </div>
+            <div class="form-group">
+                <label for="nip">NIP:</label>
+                <input type="text" id="nip" name="nip">
+            </div>
+            <div class="form-group">
+                <label for="ruangan">Ruangan:</label>
+                <input type="text" id="ruangan" name="ruangan">
+            </div>
+
+            <table>
+                <tr>
+                    <th>No</th>
+                    <th>Uraian</th>
+                    <th>Dilakukan</th>
+                    <th>Tidak dilakukan</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Pastikan dan lakukan identifikasi pasien yang akan dilaporkan</td>
+                    <td><input type="checkbox" id="dilakukan1"></td>
+                    <td><input type="checkbox" id="tidakDilakukan1"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Siapkan Rekam Medis dan memahami kondisi pasien yang akan dilaporkan</td>
+                    <td><input type="checkbox" id="dilakukan2"></td>
+                    <td><input type="checkbox" id="tidakDilakukan2"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Mempelajari dan memahami kronologis status atau kondisi permasalahan kesehatan pasien yang akan dilaporkan</td>
+                    <td><input type="checkbox" id="dilakukan3"></td>
+                    <td><input type="checkbox" id="tidakDilakukan3"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Menyiapkan alat tulis</td>
+                    <td><input type="checkbox" id="dilakukan4"></td>
+                    <td><input type="checkbox" id="tidakDilakukan4"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Menghubungi Dokter untuk melaporkan situasi/ kondisi (situation) terkait permasalahan kesehatan pasien atau keadaan pasien yang akan dilaporkan</td>
+                    <td><input type="checkbox" id="dilakukan5"></td>
+                    <td><input type="checkbox" id="tidakDilakukan5"></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Menginformasikan identitas petugas yang melaporkan, ruangan/ unit, identitas pasien dan nomor ruangan. Dilakukan dengan sikap komunikatif, ramah dan sopan</td>
+                    <td><input type="checkbox" id="dilakukan6"></td>
+                    <td><input type="checkbox" id="tidakDilakukan6"></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Menyampaikan situasi atau kondisi terkait permasalahan kesehatan pasien, kapan mulai terjadi dan seberapa berat tingkat permasalahan. Dilakukan dengan teknik komunikasi efektif dengan artikulasi bahasa jelas dan intonasi suara yang sesuai</td>
+                    <td><input type="checkbox" id="dilakukan7"></td>
+                    <td><input type="checkbox" id="tidakDilakukan7"></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Menyampaikan latar belakang klinis (Background) informasi keadaan yang melatarbelakangi permasalahan pasien terkait informasi klinis pasien</td>
+                    <td><input type="checkbox" id="dilakukan8"></td>
+                    <td><input type="checkbox" id="tidakDilakukan8"></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Menyampaikan tindakan yang telah dilakukan dalam mengatasi permasalahan pasien</td>
+                    <td><input type="checkbox" id="dilakukan9"></td>
+                    <td><input type="checkbox" id="tidakDilakukan9"></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Menyampaikan Penilaian (Assessment) terhadap situasi dan keadaan pasien yang dapat diamati saat itu, termasuk tindakan yang telah dilakukan dalam mengatasi permasalahan pasien tersebut berdasarkan penilaian observasi saat itu</td>
+                    <td><input type="checkbox" id="dilakukan10"></td>
+                    <td><input type="checkbox" id="tidakDilakukan10"></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Mengkonfirmasi rekomendasi (Recommendation) apa yang harus dilakukan tindak lanjut terhadap kondisi / keadaan permasalahan kesehatan pasien saat itu</td>
+                    <td><input type="checkbox" id="dilakukan11"></td>
+                    <td><input type="checkbox" id="tidakDilakukan11"></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Menyiapkan Rekam Medis pasien sesuai identitas pasien dengan mencocokan nama, tanggal lahir dan nomor rekam medis pasien</td>
+                    <td><input type="checkbox" id="dilakukan12"></td>
+                    <td><input type="checkbox" id="tidakDilakukan12"></td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Menuliskan pesan yang disampaikan oleh Dokter (pemberi pesan) pada lembar catatan perawatan terintegrasi. Penulisan menggunakan singkatan terstandar, akronim, dan simbol sesuai ketentuan penulisan</td>
+                    <td><input type="checkbox" id="dilakukan13"></td>
+                    <td><input type="checkbox" id="tidakDilakukan13"></td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Membacakan kembali pesan yang sudah ditulis kepada dokter</td>
+                    <td><input type="checkbox" id="dilakukan14"></td>
+                    <td><input type="checkbox" id="tidakDilakukan14"></td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Mengingatkan dokter (pemberi pesan) untuk melakukan konfirmasi guna meyakinkan kebenaran dari instruksi</td>
+                    <td><input type="checkbox" id="dilakukan15"></td>
+                    <td><input type="checkbox" id="tidakDilakukan15"></td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Melakukan konfirmasi dilakukan dalam waktu 1 x 24 kepada dokter yang memberikan instruksi</td>
+                    <td><input type="checkbox" id="dilakukan16"></td>
+                    <td><input type="checkbox" id="tidakDilakukan16"></td>
+                </tr>
+            </table>
+            <button type="button" class="button" onclick="hitungSkor()">Hitung Skor</button>
+        </form>
+
+        <div class="result">
+            <p id="skor"></p>
+            <p>Tanggal: <span id="tanggal"></span></p>
+            <p>Nama Perawat yang melakukan supervisi: <span id="namaSupervisi"></span></p>
+            <p>(<span id="namaPerawatSupervisi"></span>)</p>
+        </div>
+    </div>
+
+    <script>
+        function hitungSkor() {
+            const dilakukan = [
+                document.getElementById('dilakukan1').checked ? 1 : 0,
+                document.getElementById('dilakukan2').checked ? 1 : 0,
+                document.getElementById('dilakukan3').checked ? 1 : 0,
+                document.getElementById('dilakukan4').checked ? 1 : 0,
+                document.getElementById('dilakukan5').checked ? 1 : 0,
+                document.getElementById('dilakukan6').checked ? 1 : 0,
+                document.getElementById('dilakukan7').checked ? 1 : 0,
+                document.getElementById('dilakukan8').checked ? 1 : 0,
+                document.getElementById('dilakukan9').checked ? 1 : 0,
+                document.getElementById('dilakukan10').checked ? 1 : 0,
+                document.getElementById('dilakukan11').checked ? 1 : 0,
+                document.getElementById('dilakukan12').checked ? 1 : 0,
+                document.getElementById('dilakukan13').checked ? 1 : 0,
+                document.getElementById('dilakukan14').checked ? 1 : 0,
+                document.getElementById('dilakukan15').checked ? 1 : 0,
+                document.getElementById('dilakukan16').checked ? 1 : 0
+            ];
+            const totalDilakukan = dilakukan.reduce((a, b) => a + b, 0);
+            const totalItem = 16;
+            const skor = (totalDilakukan / totalItem) * 100;
+
+            document.getElementById('skor').innerText = `SKOR: ${skor.toFixed(2)}`;
+            document.getElementById('tanggal').innerText = new Date().toLocaleDateString();
+            document.getElementById('namaSupervisi').innerText = document.getElementById('namaPerawat').value;
+            document.getElementById('namaPerawatSupervisi').innerText = document.getElementById('namaPerawat').value;
+        }
+    </script>
+</body>
+</html>

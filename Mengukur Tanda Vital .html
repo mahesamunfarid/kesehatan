@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengukur Tanda Vital</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .formula {
+            margin-top: 20px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MENGUKUR TANDA VITAL</h1>
+        <form id="form">
+            <div class="form-group">
+                <label for="namaPerawat">Nama Perawat:</label>
+                <input type="text" id="namaPerawat" name="namaPerawat">
+            </div>
+            <div class="form-group">
+                <label for="nip">NIP:</label>
+                <input type="text" id="nip" name="nip">
+            </div>
+            <div class="form-group">
+                <label for="ruangan">Ruangan:</label>
+                <input type="text" id="ruangan" name="ruangan">
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Uraian</th>
+                        <th>Dilakukan</th>
+                        <th>Tidak Dilakukan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Add rows here following the same structure -->
+                    <tr>
+                        <td>1</td>
+                        <td>Menyiapkan alat: Tensimeter, Termometer, oksimeter, jam</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Mengucapkan salam</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Memperkenalkan diri</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Melakukan hand hygiene sesuai SPO</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Mengecek gelang identitas dengan rekam medik pasien</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Menjelaskan prosedur tindakan yang akan dilakukan</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Mengatur posisi pasien yang nyaman</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Pembebasan / penggulungan pakaian pada lengan yang dominan (umumnya lengan kanan)</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Pemasangan manset sphygmomanometer pada lengan bagian atas klien 2,5 – 5 cm dari area arteri brachialis</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Perabaan / palpasi denyut arteri brachialis dengan menggunakan ujung jari tangan pada fossa cubiti / pergelangan tangan yang dominan</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Pemompaan bulbus tensimeter</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Pencatatan nilai sistole dan diastole</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Menyampaikan hasil pengukuran kepada pasien atau keluarga (dalam batas normal atau tidak)</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>Pemasangan termometer / jepitkan termometer di daerah axilla dengan cara merapatkan tangan ke tubuh dan menyilangkan ke dada, tangan yang lain menopang siku yang menjepit termometer</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>Meletakkan sensor termometer pada dahi pasien, sambil menekan tombol, sampai muncul angka yang menunjukkan suhu tubuh pasien</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>Menyampaikan hasil pengukuran kepada pasien atau keluarga (dalam batas normal atau tidak)</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>Meletakkan tiga jari perawat yang dominan telunjuk, jari tengah dan jari manis di arteri radialis</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>Menghitung denyut nadi selama 60 detik penuh atau 30 detik x 2 atau 15 detik x 4 dengan melihat petunjuk waktu</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>Mengkaji irama, isi, amplitude dan elastisitas dinding pembuluh darah arteri</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>Menyampaikan hasil pengukuran kepada pasien / keluarga</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>Menyampaikan hasil pengukuran kepada pasien atau keluarga (dalam batas normal atau tidak)</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>Peletakan tangan pada arteri radialis (seperti menghitung nadi)</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td>Menghitung pernapasan waktu inspirasi pada dada atau perut selama 1 (satu) menit</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td>Menyampaikan hasil pengukuran kepada pasien atau keluarga (dalam batas normal atau tidak)</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>Pastikan area tangan dan tidak menggunakan cat kuku pada jari untuk pengecekan saturasi oksigen</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>Menyalakan tombol on off oksimeter</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td>Menjepitkan oksimeter pada jari tangan atau jari kaki</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>28</td>
+                        <td>Pastikan alat saturasi oksigen menyala hingga tanda pemeriksaan selesai</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>29</td>
+                        <td>Lepaskan oximeter saat sudah mengetahui hasil pemeriksaan</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>30</td>
+                        <td>Menyampaikan hasil pengukuran kepada pasien atau keluarga (dalam batas normal atau tidak)</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="form-group">
+                <label for="tanggal">Tanggal:</label>
+                <input type="text" id="tanggal" name="tanggal">
+            </div>
+            <div class="form-group">
+                <label for="namaSupervisi">Nama Perawat yang melakukan supervisi:</label>
+                <input type="text" id="namaSupervisi" name="namaSupervisi">
+            </div>
+
+            <button type="button" class="button" onclick="calculateScore()">Hitung Skor</button>
+
+            <div class="formula">
+                 <br>
+                SKOR = (Jumlah yang dilakukan / 30) x 100
+            </div>
+
+            <div class="result" id="result">
+                SKOR: 0
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function calculateScore() {
+            const dilakukanCheckboxes = document.querySelectorAll('.dilakukan');
+            const totalItems = 30; // Total item yang ada
+            let countDilakukan = 0;
+
+            dilakukanCheckboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    countDilakukan++;
+                }
+            });
+
+            const score = (countDilakukan / totalItems) * 100;
+            document.getElementById('result').innerText = `SKOR: ${score.toFixed(2)}%`;
+        }
+    </script>
+</body>
+</html>

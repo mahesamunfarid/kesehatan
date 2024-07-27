@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEMBERIAN EDUKASI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .note {
+            font-style: italic;
+            color: #555;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>PEMBERIAN EDUKASI</h2>
+        <form id="formPemberianEdukasi">
+            <div class="form-group">
+                <label for="namaPerawat">Nama Perawat:</label>
+                <input type="text" id="namaPerawat" name="namaPerawat">
+            </div>
+            <div class="form-group">
+                <label for="nip">NIP:</label>
+                <input type="text" id="nip" name="nip">
+            </div>
+            <div class="form-group">
+                <label for="ruangan">Ruangan:</label>
+                <input type="text" id="ruangan" name="ruangan">
+            </div>
+
+            <table>
+                <tr>
+                    <th>No</th>
+                    <th>Uraian</th>
+                    <th>Dilakukan</th>
+                    <th>Tidak dilakukan</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Mengidentifikasi kebutuhan belajar pasien dengan validasi data rekam medik</td>
+                    <td><input type="checkbox" id="dilakukan1"></td>
+                    <td><input type="checkbox" id="tidakDilakukan1"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Mengidentifikasi metode pendidikan kesehatan yang sesuai</td>
+                    <td><input type="checkbox" id="dilakukan2"></td>
+                    <td><input type="checkbox" id="tidakDilakukan2"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Menyiapkan materi pendidikan kesehatan yang dibutuhkan pasien</td>
+                    <td><input type="checkbox" id="dilakukan3"></td>
+                    <td><input type="checkbox" id="tidakDilakukan3"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Menyiapkan media pendidikan kesehatan</td>
+                    <td><input type="checkbox" id="dilakukan4"></td>
+                    <td><input type="checkbox" id="tidakDilakukan4"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Menyiapkan lingkungan yang aman dan nyaman</td>
+                    <td><input type="checkbox" id="dilakukan5"></td>
+                    <td><input type="checkbox" id="tidakDilakukan5"></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Pembacaan status dan data pasien untuk memastikan program materi penkes yang akan disampaikan.</td>
+                    <td><input type="checkbox" id="dilakukan6"></td>
+                    <td><input type="checkbox" id="tidakDilakukan6"></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Menyiapkan alat – alat yang akan digunakan</td>
+                    <td><input type="checkbox" id="dilakukan7"></td>
+                    <td><input type="checkbox" id="tidakDilakukan7"></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Mengucapkan salam</td>
+                    <td><input type="checkbox" id="dilakukan8"></td>
+                    <td><input type="checkbox" id="tidakDilakukan8"></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Memperkenalkan diri</td>
+                    <td><input type="checkbox" id="dilakukan9"></td>
+                    <td><input type="checkbox" id="tidakDilakukan9"></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Menyampaikan tujuan pendidikan kesehatan</td>
+                    <td><input type="checkbox" id="dilakukan10"></td>
+                    <td><input type="checkbox" id="tidakDilakukan10"></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Menyampaikan kontrak waktu, tempat dan topik</td>
+                    <td><input type="checkbox" id="dilakukan11"></td>
+                    <td><input type="checkbox" id="tidakDilakukan11"></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Mengkaji ulang (review) pengetahuan pasien tentang topik yang akan dibahas.</td>
+                    <td><input type="checkbox" id="dilakukan12"></td>
+                    <td><input type="checkbox" id="tidakDilakukan12"></td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Menyampaikan materi pendidikan kesehatan secara lengkap dan jelas dengan bahasa yang mudah dimengerti oleh pasien atau keluarga</td>
+                    <td><input type="checkbox" id="dilakukan13"></td>
+                    <td><input type="checkbox" id="tidakDilakukan13"></td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Saat memberikan edukasi ada kontak mata dengan pasien atau keluarga</td>
+                    <td><input type="checkbox" id="dilakukan14"></td>
+                    <td><input type="checkbox" id="tidakDilakukan14"></td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Saat memberikan edukasi menggunakan komunikasi lisan yang tegas lugas</td>
+                    <td><input type="checkbox" id="dilakukan15"></td>
+                    <td><input type="checkbox" id="tidakDilakukan15"></td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Memberikan kesempatan pada pasien atau keluarga untuk bertanya.</td>
+                    <td><input type="checkbox" id="dilakukan16"></td>
+                    <td><input type="checkbox" id="tidakDilakukan16"></td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Melakukan klarifikasi kepada pasien atau keluarga, apabila ada ketidakjelasan informasi yang disampaikan</td>
+                    <td><input type="checkbox" id="dilakukan17"></td>
+                    <td><input type="checkbox" id="tidakDilakukan17"></td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Melakukan evaluasi respon pasien atau keluarga</td>
+                    <td><input type="checkbox" id="dilakukan18"></td>
+                    <td><input type="checkbox" id="tidakDilakukan18"></td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Memberikan reinforcement positif pada pasien atau keluarga</td>
+                    <td><input type="checkbox" id="dilakukan19"></td>
+                    <td><input type="checkbox" id="tidakDilakukan19"></td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Memberikan kesimpulan aspek penting dari materi pendidikan kesehatan yang diberikan.</td>
+                    <td><input type="checkbox" id="dilakukan20"></td>
+                    <td><input type="checkbox" id="tidakDilakukan20"></td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>Melakukan rencana tindak lanjut</td>
+                    <td><input type="checkbox" id="dilakukan21"></td>
+                    <td><input type="checkbox" id="tidakDilakukan21"></td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>Menutup, dan mengucapkan salam</td>
+                    <td><input type="checkbox" id="dilakukan22"></td>
+                    <td><input type="checkbox" id="tidakDilakukan22"></td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>Memberikan leaflet materi pendidikan kesehatan kepada pasien atau keluarga.</td>
+                    <td><input type="checkbox" id="dilakukan23"></td>
+                    <td><input type="checkbox" id="tidakDilakukan23"></td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>Merapihkan alat</td>
+                    <td><input type="checkbox" id="dilakukan24"></td>
+                    <td><input type="checkbox" id="tidakDilakukan24"></td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>Melakukan cuci tangan sesuai prosedur</td>
+                    <td><input type="checkbox" id="dilakukan25"></td>
+                    <td><input type="checkbox" id="tidakDilakukan25"></td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>Mendokumentasikan tindakan dan respon pasien pada rekam medik</td>
+                    <td><input type="checkbox" id="dilakukan26"></td>
+                    <td><input type="checkbox" id="tidakDilakukan26"></td>
+                </tr>
+            </table>
+
+            <div class="result">
+                <p id="skor"></p>
+                <p>Tanggal: <input type="text" id="tanggal"></p>
+                <p>Nama Perawat yang melakukan supervisi: <input type="text" id="namaSupervisi"></p>
+                <p>()<input type="text" id="namaPerawatSupervisi"></p>
+            </div>
+        </form>
+
+        <button type="button" class="button" onclick="hitungSkor()">Hitung Skor</button>
+    </div>
+
+    <script>
+        function hitungSkor() {
+            const totalItems = 26;
+            let dilakukanCount = 0;
+
+            for (let i = 1; i <= totalItems; i++) {
+                const dilakukanCheckbox = document.getElementById(`dilakukan${i}`);
+                if (dilakukanCheckbox && dilakukanCheckbox.checked) {
+                    dilakukanCount++;
+                }
+            }
+
+            const skor = (dilakukanCount / totalItems) * 100;
+            document.getElementById('skor').innerText = `SKOR: ${skor.toFixed(2)}%`;
+        }
+    </script>
+</body>
+</html>

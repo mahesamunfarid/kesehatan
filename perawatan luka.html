@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulir Perawatan Luka</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Formulir Perawatan Luka</h2>
+<form onsubmit="return hitungSkor()">
+    <label for="namaPerawat">Nama Perawat:</label><br>
+    <input type="text" id="namaPerawat" name="namaPerawat"><br><br>
+
+    <label for="nip">NIP:</label><br>
+    <input type="text" id="nip" name="nip"><br><br>
+
+    <label for="ruangan">Ruangan:</label><br>
+    <input type="text" id="ruangan" name="ruangan"><br><br>
+
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Uraian</th>
+            <th>Dilakukan</th>
+            <th>Tidak Dilakukan</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Menyiapkan alat: Dressing pack, handscoon steril, kassa steril secukupnya, Salep (jika dibutuhkan), hipavik, pengalas, gunting, NaCl 0,9%, transofik</td>
+            <td><input type="checkbox" name="uraian1_dilakukan"></td>
+            <td><input type="checkbox" name="uraian1_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Mengucapkan salam</td>
+            <td><input type="checkbox" name="uraian2_dilakukan"></td>
+            <td><input type="checkbox" name="uraian2_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Memperkenalkan diri</td>
+            <td><input type="checkbox" name="uraian3_dilakukan"></td>
+            <td><input type="checkbox" name="uraian3_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Melakukan hand hygiene sesuai SPO</td>
+            <td><input type="checkbox" name="uraian4_dilakukan"></td>
+            <td><input type="checkbox" name="uraian4_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Mengecek gelang identitas dengan rekam medik pasien</td>
+            <td><input type="checkbox" name="uraian5_dilakukan"></td>
+            <td><input type="checkbox" name="uraian5_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <ul>
+                    <li>Gelang warna merah muda untuk pasien perempuan</li>
+                    <li>Gelang warna biru muda untuk pasien laki-laki</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Menjelaskan prosedur tindakan yang akan dilakukan</td>
+            <td><input type="checkbox" name="uraian6_dilakukan"></td>
+            <td><input type="checkbox" name="uraian6_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Mengatur posisi pasien yang nyaman</td>
+            <td><input type="checkbox" name="uraian7_dilakukan"></td>
+            <td><input type="checkbox" name="uraian7_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Mendekatkan alat-alat</td>
+            <td><input type="checkbox" name="uraian8_dilakukan"></td>
+            <td><input type="checkbox" name="uraian8_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Memasang pengalas pada area sekitar luka</td>
+            <td><input type="checkbox" name="uraian9_dilakukan"></td>
+            <td><input type="checkbox" name="uraian9_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Menggunakan sarung tangan bersih</td>
+            <td><input type="checkbox" name="uraian10_dilakukan"></td>
+            <td><input type="checkbox" name="uraian10_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Membuka balutan luka, perlahan-lahan (perhatikan respon nyeri pasien)</td>
+            <td><input type="checkbox" name="uraian11_dilakukan"></td>
+            <td><input type="checkbox" name="uraian11_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Membuang balutan kedalam bengkok</td>
+            <td><input type="checkbox" name="uraian12_dilakukan"></td>
+            <td><input type="checkbox" name="uraian12_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>Membuang ke tempat sampah kuning</td>
+            <td><input type="checkbox" name="uraian13_dilakukan"></td>
+            <td><input type="checkbox" name="uraian13_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>Melepaskan sarung tangan bersih</td>
+            <td><input type="checkbox" name="uraian14_dilakukan"></td>
+            <td><input type="checkbox" name="uraian14_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>Melakukan hand hygiene sesuai SPO</td>
+            <td><input type="checkbox" name="uraian15_dilakukan"></td>
+            <td><input type="checkbox" name="uraian15_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>Membuka dressing pack, dengan tetap mempertahankan sterilitas</td>
+            <td><input type="checkbox" name="uraian16_dilakukan"></td>
+            <td><input type="checkbox" name="uraian16_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>Tuangkan NaCl 0,9% secukupnya kedalam kom (pertahankan sterilitas)</td>
+            <td><input type="checkbox" name="uraian17_dilakukan"></td>
+            <td><input type="checkbox" name="uraian17_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>Menyiapkan obat topikal yang dibutuhkan</td>
+            <td><input type="checkbox" name="uraian18_dilakukan"></td>
+            <td><input type="checkbox" name="uraian18_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>Membuka poches kassa steril secukupnya, dan letakkan di area steril (pertahankan sterilitas)</td>
+            <td><input type="checkbox" name="uraian19_dilakukan"></td>
+            <td><input type="checkbox" name="uraian19_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>Menggunakan handscoon steril</td>
+            <td><input type="checkbox" name="uraian20_dilakukan"></td>
+            <td><input type="checkbox" name="uraian20_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>Melakukan pencucian luka menggunakan kassa dengan NaCl 0,9 % dari dalam keluar</td>
+            <td><input type="checkbox" name="uraian21_dilakukan"></td>
+            <td><input type="checkbox" name="uraian21_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>Buang kassa kedalam bengkok</td>
+            <td><input type="checkbox" name="uraian22_dilakukan"></td>
+            <td><input type="checkbox" name="uraian22_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>23</td>
+            <td>Lakukan hingga bersih</td>
+            <td><input type="checkbox" name="uraian23_dilakukan"></td>
+            <td><input type="checkbox" name="uraian23_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>24</td>
+            <td>Melakukan pengkajian luka (warna dasar luka, goa, ukuran luka dan eksudat)</td>
+            <td><input type="checkbox" name="uraian24_dilakukan"></td>
+            <td><input type="checkbox" name="uraian24_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>Melakukan pengeringan sisa-sisa cairan NaCl 0,9 % dengan kasa kering</td>
+            <td><input type="checkbox" name="uraian25_dilakukan"></td>
+            <td><input type="checkbox" name="uraian25_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>26</td>
+            <td>Oleskan topikal bila diperlukan</td>
+            <td><input type="checkbox" name="uraian26_dilakukan"></td>
+            <td><input type="checkbox" name="uraian26_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>27</td>
+            <td>Tutup dengan kassa kering</td>
+            <td><input type="checkbox" name="uraian27_dilakukan"></td>
+            <td><input type="checkbox" name="uraian27_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>28</td>
+            <td>Menutup balutan menggunakan plester (anti air jika diperlukan)</td>
+            <td><input type="checkbox" name="uraian28_dilakukan"></td>
+            <td><input type="checkbox" name="uraian28_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>29</td>
+            <td>Merapikan posisi nyaman pasien</td>
+            <td><input type="checkbox" name="uraian29_dilakukan"></td>
+            <td><input type="checkbox" name="uraian29_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>30</td>
+            <td>Mengkaji respon pasien</td>
+            <td><input type="checkbox" name="uraian30_dilakukan"></td>
+            <td><input type="checkbox" name="uraian30_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>31</td>
+            <td>Membereskan alat</td>
+            <td><input type="checkbox" name="uraian31_dilakukan"></td>
+            <td><input type="checkbox" name="uraian31_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>32</td>
+            <td>Membuang sampah sesuai kategori</td>
+            <td><input type="checkbox" name="uraian32_dilakukan"></td>
+            <td><input type="checkbox" name="uraian32_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>33</td>
+            <td>Melepaskan sarung tangan</td>
+            <td><input type="checkbox" name="uraian33_dilakukan"></td>
+            <td><input type="checkbox" name="uraian33_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>34</td>
+            <td>Melakukan hand hygiene sesuai SPO</td>
+            <td><input type="checkbox" name="uraian34_dilakukan"></td>
+            <td><input type="checkbox" name="uraian34_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>35</td>
+            <td>Melakukan dokumentasi dalam rekam medik pasien dengan benar</td>
+            <td><input type="checkbox" name="uraian35_dilakukan"></td>
+            <td><input type="checkbox" name="uraian35_tidak_dilakukan"></td>
+        </tr>
+    </table><br>
+
+    <label for="skor">SKOR : Jumlah yang dilakukan dibagi Total Item dikali 100</label><br>
+    <p id="skor">* = (Total Skor : 35) x 100</p><br>
+
+    <label for="tanggal">Tanggal:</label><br>
+    <input type="date" id="tanggal" name="tanggal"><br><br>
+
+    <label for="namaSupervisi">Nama Perawat yang melakukan supervisi:</label><br>
+    <input type="text" id="namaSupervisi" name="namaSupervisi"><br><br>
+
+    <input type="submit" value="Hitung Skor">
+</form>
+
+<script>
+function hitungSkor() {
+    var totalItem = 35;
+    var dilakukanCount = 0;
+
+    for (var i = 1; i <= totalItem; i++) {
+        if (document.querySelector('input[name="uraian' + i + '_dilakukan"]').checked) {
+            dilakukanCount++;
+        }
+    }
+
+    var skor = (dilakukanCount / totalItem) * 100;
+    document.getElementById('skor').innerText = "* = (Total Skor : " + totalItem + ") x 100 = " + skor.toFixed(2);
+
+    return false; // Mencegah pengiriman form
+}
+</script>
+
+</body>
+</html>

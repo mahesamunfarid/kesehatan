@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengecek Identitas Pasien</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .center {
+            margin: 20px auto;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Mengecek Identitas Pasien</h2>
+        <form id="formIdentitas">
+            <div class="form-group">
+                <label for="namaPerawat">Nama Perawat:</label>
+                <input type="text" id="namaPerawat" name="namaPerawat">
+            </div>
+            <div class="form-group">
+                <label for="nip">NIP:</label>
+                <input type="text" id="nip" name="nip">
+            </div>
+            <div class="form-group">
+                <label for="ruangan">Ruangan:</label>
+                <input type="text" id="ruangan" name="ruangan">
+            </div>
+
+            <table>
+                <tr>
+                    <th>No</th>
+                    <th>Uraian</th>
+                    <th>Dilakukan</th>
+                    <th>Tidak dilakukan</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Mengucapkan salam</td>
+                    <td><input type="checkbox" id="dilakukan1"></td>
+                    <td><input type="checkbox" id="tidakDilakukan1"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Meminta pasien atau keluarga untuk menyebutkan nama pasien dan Tanggal lahir sambil melihat gelang identitas dan mencocokkannya</td>
+                    <td><input type="checkbox" id="dilakukan2"></td>
+                    <td><input type="checkbox" id="tidakDilakukan2"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Menyampaikan kepada pasien atau keluarga bahwa sesuai atau tidak sesuai identitasnya</td>
+                    <td><input type="checkbox" id="dilakukan3"></td>
+                    <td><input type="checkbox" id="tidakDilakukan3"></td>
+                </tr>
+            </table>
+            <button type="button" class="button" onclick="hitungSkor()">Hitung Skor</button>
+        </form>
+
+        <p class="result" id="skor"></p>
+        <p class="result">Tanggal: <span id="tanggal"></span></p>
+        <p class="result">Nama Perawat yang melakukan supervisi: <span id="namaSupervisi"></span></p>
+        <p class="result">(<span id="namaPerawatSupervisi"></span>)</p>
+    </div>
+
+    <script>
+        function hitungSkor() {
+            const dilakukan1 = document.getElementById('dilakukan1').checked ? 1 : 0;
+            const dilakukan2 = document.getElementById('dilakukan2').checked ? 1 : 0;
+            const dilakukan3 = document.getElementById('dilakukan3').checked ? 1 : 0;
+            const totalDilakukan = dilakukan1 + dilakukan2 + dilakukan3;
+            const totalItem = 3;
+            const skor = (totalDilakukan / totalItem) * 100;
+
+            document.getElementById('skor').innerText = `SKOR: ${skor}`;
+            document.getElementById('tanggal').innerText = new Date().toLocaleDateString();
+            document.getElementById('namaSupervisi').innerText = document.getElementById('namaPerawat').value;
+            document.getElementById('namaPerawatSupervisi').innerText = document.getElementById('namaPerawat').value;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memasang Infus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function hitungSkor() {
+            let totalDilakukan = 0;
+            const totalItem = 46;
+
+            for (let i = 1; i <= totalItem; i++) {
+                if (document.getElementById('dilakukan' + i).checked) {
+                    totalDilakukan++;
+                }
+            }
+
+            const skor = (totalDilakukan / totalItem) * 100;
+            document.getElementById('hasilSkor').textContent = `SKOR: ${skor.toFixed(2)}`;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>MEMASANG INFUS</h1>
+        <form onsubmit="event.preventDefault(); hitungSkor();">
+            <div class="form-group">
+                <label for="namaPerawat">Nama Perawat:</label>
+                <input type="text" id="namaPerawat" name="namaPerawat">
+            </div>
+            <div class="form-group">
+                <label for="nip">NIP:</label>
+                <input type="text" id="nip" name="nip">
+            </div>
+            <div class="form-group">
+                <label for="ruangan">Ruangan:</label>
+                <input type="text" id="ruangan" name="ruangan">
+            </div>
+
+            <table>
+                <tr>
+                    <th>No</th>
+                    <th>Uraian</th>
+                    <th>Dilakukan</th>
+                    <th>Tidak dilakukan</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Mengecek rekam medik pasien untuk melihat rencana keperawatan pemasangan infus</td>
+                    <td><input type="checkbox" id="dilakukan1"></td>
+                    <td><input type="checkbox" id="tidakDilakukan1"></td>
+                </tr>
+                <tr>
+                    <td colspan="4"><strong>Persiapan Alat</strong></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Intravena kateter sesuai kebutuhan pasien</td>
+                    <td><input type="checkbox" id="dilakukan2"></td>
+                    <td><input type="checkbox" id="tidakDilakukan2"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Infus set atau transfusi set</td>
+                    <td><input type="checkbox" id="dilakukan3"></td>
+                    <td><input type="checkbox" id="tidakDilakukan3"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Cairan infus sesuai kebutuhan pasien</td>
+                    <td><input type="checkbox" id="dilakukan4"></td>
+                    <td><input type="checkbox" id="tidakDilakukan4"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Tourniquet</td>
+                    <td><input type="checkbox" id="dilakukan5"></td>
+                    <td><input type="checkbox" id="tidakDilakukan5"></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Pengalas</td>
+                    <td><input type="checkbox" id="dilakukan6"></td>
+                    <td><input type="checkbox" id="tidakDilakukan6"></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Alcohol swab</td>
+                    <td><input type="checkbox" id="dilakukan7"></td>
+                    <td><input type="checkbox" id="tidakDilakukan7"></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Leukomed</td>
+                    <td><input type="checkbox" id="dilakukan8"></td>
+                    <td><input type="checkbox" id="tidakDilakukan8"></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Sarung tangan bersih/tidak steril</td>
+                    <td><input type="checkbox" id="dilakukan9"></td>
+                    <td><input type="checkbox" id="tidakDilakukan9"></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Safety box</td>
+                    <td><input type="checkbox" id="dilakukan10"></td>
+                    <td><input type="checkbox" id="tidakDilakukan10"></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Bengkok</td>
+                    <td><input type="checkbox" id="dilakukan11"></td>
+                    <td><input type="checkbox" id="tidakDilakukan11"></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Standar infus</td>
+                    <td><input type="checkbox" id="dilakukan12"></td>
+                    <td><input type="checkbox" id="tidakDilakukan12"></td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Mengucapkan salam</td>
+                    <td><input type="checkbox" id="dilakukan13"></td>
+                    <td><input type="checkbox" id="tidakDilakukan13"></td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Memperkenalkan diri</td>
+                    <td><input type="checkbox" id="dilakukan14"></td>
+                    <td><input type="checkbox" id="tidakDilakukan14"></td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Melakukan hand hygiene sesuai prosedur</td>
+                    <td><input type="checkbox" id="dilakukan15"></td>
+                    <td><input type="checkbox" id="tidakDilakukan15"></td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Menjelaskan prosedur tindakan yang akan dilakukan</td>
+                    <td><input type="checkbox" id="dilakukan16"></td>
+                    <td><input type="checkbox" id="tidakDilakukan16"></td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Mengatur posisi pasien yang nyaman</td>
+                    <td><input type="checkbox" id="dilakukan17"></td>
+                    <td><input type="checkbox" id="tidakDilakukan17"></td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Menjaga privasi pasien, dengan menutup gordyn atau sampiran</td>
+                    <td><input type="checkbox" id="dilakukan18"></td>
+                    <td><input type="checkbox" id="tidakDilakukan18"></td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Menggunakan sarung tangan</td>
+                    <td><input type="checkbox" id="dilakukan19"></td>
+                    <td><input type="checkbox" id="tidakDilakukan19"></td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Melakukan kanulasi intravena:</td>
+                    <td><input type="checkbox" id="dilakukan20"></td>
+                    <td><input type="checkbox" id="tidakDilakukan20"></td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>Menentukan lokasi insersi (pemasangan) pada area yang tidak cedera, mudah diobservasi dan dirawat</td>
+                    <td><input type="checkbox" id="dilakukan21"></td>
+                    <td><input type="checkbox" id="tidakDilakukan21"></td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>Mengaplikasikan tourniquet 10-15 cm diatas lokasi insersi untuk distensi vena, kemudian memilih pembuluh darah vena yang sesuai</td>
+                    <td><input type="checkbox" id="dilakukan22"></td>
+                    <td><input type="checkbox" id="tidakDilakukan22"></td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>Jika perlu, meletakkan penghangat selama 10-15 menit untuk vasodilatasi</td>
+                    <td><input type="checkbox" id="dilakukan23"></td>
+                    <td><input type="checkbox" id="tidakDilakukan23"></td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>Mensterilkan lokasi insersi dari arah dalam ke luar dengan menggunakan antiseptik selama 30 detik, dan membiarkan kering</td>
+                    <td><input type="checkbox" id="dilakukan24"></td>
+                    <td><input type="checkbox" id="tidakDilakukan24"></td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>Memasang pengalas dibawah area yang akan disisipkan infus</td>
+                    <td><input type="checkbox" id="dilakukan25"></td>
+                    <td><input type="checkbox" id="tidakDilakukan25"></td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>Menyiapkan infus set dan cairan infus, dengan melepas penutup spike infus set</td>
+                    <td><input type="checkbox" id="dilakukan26"></td>
+                    <td><input type="checkbox" id="tidakDilakukan26"></td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>Mencampur cairan infus sesuai instruksi dokter</td>
+                    <td><input type="checkbox" id="dilakukan27"></td>
+                    <td><input type="checkbox" id="tidakDilakukan27"></td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>Memasang cairan infus, dengan memasukkan spike pada botol infus</td>
+                    <td><input type="checkbox" id="dilakukan28"></td>
+                    <td><input type="checkbox" id="tidakDilakukan28"></td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>Menggantungkan botol infus pada standar infus</td>
+                    <td><input type="checkbox" id="dilakukan29"></td>
+                    <td><input type="checkbox" id="tidakDilakukan29"></td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>Mengatur tetesan cairan infus hingga memenuhi selang infus (tidak ada gelembung udara pada selang infus)</td>
+                    <td><input type="checkbox" id="dilakukan30"></td>
+                    <td><input type="checkbox" id="tidakDilakukan30"></td>
+                </tr>
+                <tr>
+                    <td>31</td>
+                    <td>Melakukan kanulasi intravena dengan menarik kulit ke arah distal untuk fiksasi vena dan mengurangi nyeri</td>
+                    <td><input type="checkbox" id="dilakukan31"></td>
+                    <td><input type="checkbox" id="tidakDilakukan31"></td>
+                </tr>
+                <tr>
+                    <td>32</td>
+                    <td>Menginsersi jarum dengan sudut 10-30 derajat sampai darah tampak pada kanula</td>
+                    <td><input type="checkbox" id="dilakukan32"></td>
+                    <td><input type="checkbox" id="tidakDilakukan32"></td>
+                </tr>
+                <tr>
+                    <td>33</td>
+                    <td>Menginsersi kateter ke dalam vena sambil menarik jarum keluar</td>
+                    <td><input type="checkbox" id="dilakukan33"></td>
+                    <td><input type="checkbox" id="tidakDilakukan33"></td>
+                </tr>
+                <tr>
+                    <td>34</td>
+                    <td>Melepaskan tourniquet</td>
+                    <td><input type="checkbox" id="dilakukan34"></td>
+                    <td><input type="checkbox" id="tidakDilakukan34"></td>
+                </tr>
+                <tr>
+                    <td>35</td>
+                    <td>Melepas penutup kateter dan menyambungkan selang infus dengan kateter</td>
+                    <td><input type="checkbox" id="dilakukan35"></td>
+                    <td><input type="checkbox" id="tidakDilakukan35"></td>
+                </tr>
+                <tr>
+                    <td>36</td>
+                    <td>Memastikan cairan infus menetes</td>
+                    <td><input type="checkbox" id="dilakukan36"></td>
+                    <td><input type="checkbox" id="tidakDilakukan36"></td>
+                </tr>
+                <tr>
+                    <td>37</td>
+                    <td>Melakukan fiksasi kanula dengan steril dan kuat</td>
+                    <td><input type="checkbox" id="dilakukan37"></td>
+                    <td><input type="checkbox" id="tidakDilakukan37"></td>
+                </tr>
+                <tr>
+                    <td>38</td>
+                    <td>Mengatur tetesan sesuai instruksi dokter</td>
+                    <td><input type="checkbox" id="dilakukan38"></td>
+                    <td><input type="checkbox" id="tidakDilakukan38"></td>
+                </tr>
+                <tr>
+                    <td>39</td>
+                    <td>Membuang alat-alat yang telah digunakan sesuai dengan prinsip pencegahan infeksi</td>
+                    <td><input type="checkbox" id="dilakukan39"></td>
+                    <td><input type="checkbox" id="tidakDilakukan39"></td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td>Melepas sarung tangan dan melakukan hand hygiene sesuai prosedur</td>
+                    <td><input type="checkbox" id="dilakukan40"></td>
+                    <td><input type="checkbox" id="tidakDilakukan40"></td>
+                </tr>
+                <tr>
+                    <td>41</td>
+                    <td>Merapikan pasien dan alat-alat kembali</td>
+                    <td><input type="checkbox" id="dilakukan41"></td>
+                    <td><input type="checkbox" id="tidakDilakukan41"></td>
+                </tr>
+                <tr>
+                    <td>42</td>
+                    <td>Membereskan dan membersihkan alat-alat, mengembalikan ke tempat semula</td>
+                    <td><input type="checkbox" id="dilakukan42"></td>
+                    <td><input type="checkbox" id="tidakDilakukan42"></td>
+                </tr>
+                <tr>
+                    <td>43</td>
+                    <td>Menanyakan kenyamanan pasien</td>
+                    <td><input type="checkbox" id="dilakukan43"></td>
+                    <td><input type="checkbox" id="tidakDilakukan43"></td>
+                </tr>
+                <tr>
+                    <td>44</td>
+                    <td>Melaporkan pada perawat ruangan</td>
+                    <td><input type="checkbox" id="dilakukan44"></td>
+                    <td><input type="checkbox" id="tidakDilakukan44"></td>
+                </tr>
+                <tr>
+                    <td>45</td>
+                    <td>Mendokumentasian tindakan dan respon pasien</td>
+                    <td><input type="checkbox" id="dilakukan45"></td>
+                    <td><input type="checkbox" id="tidakDilakukan45"></td>
+                </tr>
+                <tr>
+                    <td>46</td>
+                    <td>Memberikan edukasi kepada pasien dan keluarga tentang pentingnya menjaga area infus tetap bersih dan kering</td>
+                    <td><input type="checkbox" id="dilakukan46"></td>
+                    <td><input type="checkbox" id="tidakDilakukan46"></td>
+                </tr>
+            </table>
+            <button type="submit" class="button">Hitung Skor</button>
+        </form>
+        <div id="hasilSkor" class="result"></div>
+    </div>
+</body>
+</html>

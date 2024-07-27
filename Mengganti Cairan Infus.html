@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mengganti Cairan Infus</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Mengganti Cairan Infus</h2>
+    <form id="infusForm">
+        <label for="namaPerawat">Nama Perawat:</label><br>
+        <input type="text" id="namaPerawat" name="namaPerawat"><br><br>
+        <label for="nip">NIP:</label><br>
+        <input type="text" id="nip" name="nip"><br><br>
+        <label for="ruangan">Ruangan:</label><br>
+        <input type="text" id="ruangan" name="ruangan"><br><br>
+        
+        <table>
+            <tr>
+                <th>No</th>
+                <th>Uraian</th>
+                <th>Dilakukan</th>
+                <th>Tidak dilakukan</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Mengecek rekam medik pasien untuk melihat program pemberian cairan infus</td>
+                <td><input type="checkbox" name="dilakukan"></td>
+                <td><input type="checkbox" name="tidakDilakukan"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Cairan infus sesuai kebutuhan pasien</td>
+                <td><input type="checkbox" name="dilakukan"></td>
+                <td><input type="checkbox" name="tidakDilakukan"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Mengucapkan salam</td>
+                <td><input type="checkbox" name="dilakukan"></td>
+                <td><input type="checkbox" name="tidakDilakukan"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Memperkenalkan diri</td>
+                <td><input type="checkbox" name="dilakukan"></td>
+                <td><input type="checkbox" name="tidakDilakukan"></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Melakukan hand hygiene sesuai prosedur</td>
+                <td><input type="checkbox" name="dilakukan"></td>
+                <td><input type="checkbox" name="tidakDilakukan"></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Menjelaskan prosedur tindakan yang akan dilakukan</td>
+                <td><input type="checkbox" name="dilakukan"></td>
+                <td><input type="checkbox" name="tidakDilakukan"></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Mengatur posisi pasien yang nyaman</td>
+                <td><input type="checkbox" name="dilakukan"></td>
+                <td><input type="checkbox" name="tidakDilakukan"></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Menutup klem infus</td>
+                <td><input type="checkbox" name="dilakukan"></td>
+                <td><input type="checkbox" name="tidakDilakukan"></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Melepas botol infus yang terpasang pada infuset</td>
+                <td><input type="checkbox" name="dilakukan"></td>
+                <td><input type="checkbox" name="tidakDilakukan"></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Membuka tutup botol cairan infus yang baru</td>
+                <td><input type="checkbox" name="dilakukan"></td>
+                <td><input type="checkbox" name="tidakDilakukan"></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>Melakukan desinfeksi dengan swab alkohol pada mulut botol infus yang sebelumnya sudah terpakai, bila masih baru membuka penutup area penusukan pertahankan kesetrilan area tersebut</td>
+                <td><input type="checkbox" name="dilakukan"></td>
+                <td><input type="checkbox" name="tidakDilakukan"></td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Menusukkan selang infus pada mulut botol cairan infus yang baru</td>
+                <td><input type="checkbox" name="dilakukan"></td>
+                <td><input type="checkbox" name="tidakDilakukan"></td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>Membuka klem infus sampai cairan mengalir lancar</td>
+                <td><input type="checkbox" name="dilakukan"></td>
+                <td><input type="checkbox" name="tidakDilakukan"></td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>Mengatur tetesan infus sesuai ketentuan</td>
+                <td><input type="checkbox" name="dilakukan"></td>
+                <td><input type="checkbox" name="tidakDilakukan"></td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>Memberikan label identitas pasien pada flabot infus</td>
+                <td><input type="checkbox" name="dilakukan"></td>
+                <td><input type="checkbox" name="tidakDilakukan"></td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>Merapikan pasien dan lingkungan</td>
+                <td><input type="checkbox" name="dilakukan"></td>
+                <td><input type="checkbox" name="tidakDilakukan"></td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td>Memantau kondisi pasien selama tindakan</td>
+                <td><input type="checkbox" name="dilakukan"></td>
+                <td><input type="checkbox" name="tidakDilakukan"></td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td>Melakukan hand hygiene sesuai prosedur</td>
+                <td><input type="checkbox" name="dilakukan"></td>
+                <td><input type="checkbox" name="tidakDilakukan"></td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td>Membuang flabot infus sesuai kategori sampah</td>
+                <td><input type="checkbox" name="dilakukan"></td>
+                <td><input type="checkbox" name="tidakDilakukan"></td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td>Mendokumentasikan tindakan dan respon pasien</td>
+                <td><input type="checkbox" name="dilakukan"></td>
+                <td><input type="checkbox" name="tidakDilakukan"></td>
+            </tr>
+        </table>
+
+        <br>
+        <button type="button" onclick="hitungSkor()">Hitung Skor</button>
+        <p id="skor"></p>
+        <br>
+        <label for="tanggal">Tanggal:</label><br>
+        <input type="date" id="tanggal" name="tanggal"><br><br>
+        <label for="namaSupervisor">Nama Perawat yang melakukan supervisi:</label><br>
+        <input type="text" id="namaSupervisor" name="namaSupervisor"><br><br>
+        <label for="ttdSupervisor">(...........)</label>
+    </form>
+
+    <script>
+        function hitungSkor() {
+            var dilakukan = document.querySelectorAll('input[name="dilakukan"]:checked').length;
+            var totalItem = 20;
+            var skor = (dilakukan / totalItem) * 100;
+            document.getElementById('skor').innerText = 'SKOR: ' + skor.toFixed(2);
+        }
+    </script>
+</body>
+</html>

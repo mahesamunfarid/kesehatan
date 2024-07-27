@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identitas Perawat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="text"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .btn-save {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn-save:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Identitas Perawat</h1>
+        <div class="form-group">
+            <label for="namaLengkap">Nama Lengkap:</label>
+            <input type="text" id="namaLengkap" name="namaLengkap">
+        </div>
+        <div class="form-group">
+            <label for="nip">NIP:</label>
+            <input type="text" id="nip" name="nip">
+        </div>
+        <div class="form-group">
+            <label for="nira">NIRA:</label>
+            <input type="text" id="nira" name="nira">
+        </div>
+        <div class="form-group">
+            <label for="pendidikan">Tingkat Pendidikan:</label>
+            <input type="text" id="pendidikan" name="pendidikan">
+        </div>
+        <div class="form-group">
+            <label for="mulaiBekerja">Mulai Bekerja di RS:</label>
+            <input type="text" id="mulaiBekerja" name="mulaiBekerja">
+        </div>
+        <div class="form-group">
+            <label for="levelPerawat">Level Perawat Klinis:</label>
+            <input type="text" id="levelPerawat" name="levelPerawat">
+        </div>
+        <div class="form-group">
+            <label for="ruangan">Ruangan:</label>
+            <input type="text" id="ruangan" name="ruangan">
+        </div>
+        <div class="form-group">
+            <label for="masaSTR">Masa Berlaku STR:</label>
+            <input type="text" id="masaSTR" name="masaSTR">
+        </div>
+        <div class="form-group">
+            <label for="masaSIP">Masa Berlaku SIP:</label>
+            <input type="text" id="masaSIP" name="masaSIP">
+        </div>
+        <button class="btn-save" type="submit">Simpan</button>
+    </div>
+</body>
+</html>

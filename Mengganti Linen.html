@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengganti Linen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .formula {
+            margin-top: 20px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MENGGANTI LINEN</h1>
+        <form id="form">
+            <div class="form-group">
+                <label for="namaPerawat">Nama Perawat:</label>
+                <input type="text" id="namaPerawat" name="namaPerawat">
+            </div>
+            <div class="form-group">
+                <label for="nip">NIP:</label>
+                <input type="text" id="nip" name="nip">
+            </div>
+            <div class="form-group">
+                <label for="ruangan">Ruangan:</label>
+                <input type="text" id="ruangan" name="ruangan">
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Uraian</th>
+                        <th>Dilakukan</th>
+                        <th>Tidak Dilakukan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Menyiapkan alat: Laken, stik laken, boven laken, sarung bantal, guling/bila perlu, selimut</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Mengucapkan salam</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Memperkenalkan diri</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Melakukan hand hygiene sesuai SPO</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Menjelaskan prosedur tindakan yang akan dilakukan</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Mengatur posisi pasien yang nyaman</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Menjaga privasi pasien, dengan menutup gordyn atau sampiran</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Mengangkat selimut dan masukkan ke dalam tempat pakaian kotor</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Mengatur posisi tidur pasien: miring kanan/kiri (dibantu bila pasien tidak dapat miring sendiri), bantal rapatkan di bawah kepala pasien</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Mengangkat alat-alat tenun dari bawah kasur di mana perawat berdiri</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Menggulung stik laken dan perlak sampai ke punggung pasien</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Menggulung laken sampai ke punggung pasien</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Memasang laken bersih memanjang dengan lipatan tengahnya tepat pada bagian tengah kasur, dan menyisipkan laken bagian kepala dan kaki di bawah kasur, lalu membuat sudut dan menyisipkan bagian sisi ke bawah kasur</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>Membentangkan kembali perlak yang ditutupkan pada punggung pasien</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>Memasang stik laken bersih, bersama perlak disisipkan ke bawah kasur</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>Mengatur posisi tidur pasien: terlentang kemudian dimiringkan ke arah perawat berdiri</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>Perawat pindah ke posisi lain</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>Melepaskan alat-alat tenun yang kotor dan masukkan ke dalam tempat pakaian kotor</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>Menarik laken dan perlak disisipkan ke bawah kasur</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>Mengatur kembali posisi tidur pasien: kepala posisi terlentang</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>Mengangkat bantal dan mengganti sarung bantal yang bersih</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>Mengganti boven laken dengan yang bersih, boven yang kotor ditempatkan pada tempat kotor. (untuk pasien kelas)</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td>Memasang selimut</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td>Memantau kondisi pasien selama tindakan</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>Merapikan pasien dan lingkungannya</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>Melakukan hand hygiene sesuai SPO</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="form-group">
+                <label for="tanggal">Tanggal:</label>
+                <input type="text" id="tanggal" name="tanggal">
+            </div>
+            <div class="form-group">
+                <label for="namaSupervisi">Nama Perawat yang melakukan supervisi:</label>
+                <input type="text" id="namaSupervisi" name="namaSupervisi">
+            </div>
+
+            <button type="button" class="button" onclick="calculateScore()">Hitung Skor</button>
+
+            <div class="formula">
+                <br>
+                SKOR = (Jumlah yang dilakukan / 26) x 100
+            </div>
+        </form>
+
+        <div class="result" id="result">
+            SKOR: 0
+        </div>
+    </div>
+
+    <script>
+        function calculateScore() {
+            const dilakukanCheckboxes = document.querySelectorAll('.dilakukan');
+            const totalItems = 26; // Total item yang ada
+            let countDilakukan = 0;
+
+            dilakukanCheckboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    countDilakukan++;
+                }
+            });
+
+            const score = (countDilakukan / totalItems) * 100;
+            document.getElementById('result').innerText = `SKOR: ${score.toFixed(2)}%`;
+        }
+    </script>
+</body>
+</html>

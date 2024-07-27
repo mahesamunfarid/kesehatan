@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKRINING DAN PENCEGAHAN JATUH</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .note {
+            font-style: italic;
+            color: #555;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>SKRINING DAN PENCEGAHAN JATUH</h2>
+        <form id="formPencegahanJatuh">
+            <div class="form-group">
+                <label for="namaPerawat">Nama Perawat:</label>
+                <input type="text" id="namaPerawat" name="namaPerawat">
+            </div>
+            <div class="form-group">
+                <label for="nip">NIP:</label>
+                <input type="text" id="nip" name="nip">
+            </div>
+            <div class="form-group">
+                <label for="ruangan">Ruangan:</label>
+                <input type="text" id="ruangan" name="ruangan">
+            </div>
+
+            <table>
+                <tr>
+                    <th>No</th>
+                    <th>Uraian</th>
+                    <th>Dilakukan</th>
+                    <th>Tidak dilakukan</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Melakukan penilaian tingkat risiko jatuh</td>
+                    <td><input type="checkbox" id="dilakukan1"></td>
+                    <td><input type="checkbox" id="tidakDilakukan1"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Memberi stiker atau kancing/gelang kuning sebagai penanda risiko jatuh</td>
+                    <td><input type="checkbox" id="dilakukan2"></td>
+                    <td><input type="checkbox" id="tidakDilakukan2"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Mengidentifikasi faktor lingkungan yang meningkatkan risiko jatuh</td>
+                    <td><input type="checkbox" id="dilakukan3"></td>
+                    <td><input type="checkbox" id="tidakDilakukan3"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Menunjukan pada pasien alat bantu panggilan darurat (bel)</td>
+                    <td><input type="checkbox" id="dilakukan4"></td>
+                    <td><input type="checkbox" id="tidakDilakukan4"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Memposisikan alat bantu panggil darurat dalam jangkauan pasien</td>
+                    <td><input type="checkbox" id="dilakukan5"></td>
+                    <td><input type="checkbox" id="tidakDilakukan5"></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Memposisikan barang-barang pribadi dalam jangkauan pasien</td>
+                    <td><input type="checkbox" id="dilakukan6"></td>
+                    <td><input type="checkbox" id="tidakDilakukan6"></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Menyediakan pegangan tangan yang kokoh di kamar mandi, kamar dan lorong</td>
+                    <td><input type="checkbox" id="dilakukan7"></td>
+                    <td><input type="checkbox" id="tidakDilakukan7"></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Merendahkan ketinggian tempat tidur</td>
+                    <td><input type="checkbox" id="dilakukan8"></td>
+                    <td><input type="checkbox" id="tidakDilakukan8"></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Memonitor kemampuan klien berpindah dari tempat tidur</td>
+                    <td><input type="checkbox" id="dilakukan9"></td>
+                    <td><input type="checkbox" id="tidakDilakukan9"></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Memasang pagar tempat tidur</td>
+                    <td><input type="checkbox" id="dilakukan10"></td>
+                    <td><input type="checkbox" id="tidakDilakukan10"></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Memberi penerangan yang cukup</td>
+                    <td><input type="checkbox" id="dilakukan11"></td>
+                    <td><input type="checkbox" id="tidakDilakukan11"></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Memastikan lantai selalu dalam kondisi kering</td>
+                    <td><input type="checkbox" id="dilakukan12"></td>
+                    <td><input type="checkbox" id="tidakDilakukan12"></td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Memonitor risiko jatuh minimal 1 kali setiap shift, atau sesuai tingkat risiko jatuh dan kebijakan institusi</td>
+                    <td><input type="checkbox" id="dilakukan13"></td>
+                    <td><input type="checkbox" id="tidakDilakukan13"></td>
+                </tr>
+            </table>
+
+            <div class="result">
+                <p id="skor"></p>
+                <p>Tanggal: <input type="text" id="tanggal"></p>
+                <p>Nama Perawat yang melakukan supervisi: <input type="text" id="namaSupervisi"></p>
+                <p>()<input type="text" id="namaPerawatSupervisi"></p>
+            </div>
+        </form>
+
+        <button type="button" class="button" onclick="hitungSkor()">Hitung Skor</button>
+    </div>
+
+    <script>
+        function hitungSkor() {
+            const totalItems = 13;
+            let dilakukanCount = 0;
+
+            for (let i = 1; i <= totalItems; i++) {
+                const dilakukanCheckbox = document.getElementById(`dilakukan${i}`);
+                if (dilakukanCheckbox && dilakukanCheckbox.checked) {
+                    dilakukanCount++;
+                }
+            }
+
+            const skor = (dilakukanCount / totalItems) * 100;
+            document.getElementById('skor').innerText = `SKOR: ${skor.toFixed(2)}%`;
+        }
+    </script>
+</body>
+</html>

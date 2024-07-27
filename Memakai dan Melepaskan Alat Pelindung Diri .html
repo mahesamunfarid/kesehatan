@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memakai dan Melepas Alat Pelindung Diri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .formula {
+            margin-top: 20px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MEMAKAI DAN MELEPAS ALAT PELINDUNG DIRI</h1>
+        <form id="form">
+            <div class="form-group">
+                <label for="namaPerawat">Nama Perawat:</label>
+                <input type="text" id="namaPerawat" name="namaPerawat">
+            </div>
+            <div class="form-group">
+                <label for="nip">NIP:</label>
+                <input type="text" id="nip" name="nip">
+            </div>
+            <div class="form-group">
+                <label for="ruangan">Ruangan:</label>
+                <input type="text" id="ruangan" name="ruangan">
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Uraian</th>
+                        <th>Dilakukan</th>
+                        <th>Tidak Dilakukan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Add rows here following the same structure -->
+                    <tr>
+                        <td>1</td>
+                        <td>Melakukan hand hygiene sesuai prosedur sebelum memakai masker</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Mengenakan masker sehingga hidung dan mulut terlindung oleh masker</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Mengganti masker apabila rusak, basah, lembab dan tercemar</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Menggunakan masker satu kali pakai</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Melepaskan tali bagian bawah dan kemudian tali atau karet bagian atas</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Membuang ke tempat limbah infeksius</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Melakukan hand hygiene sesuai prosedur setelah melepas masker bedah</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Memilih sarung tangan sesuai ukuran</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Melakukan hand hygiene sesuai prosedur sebelum memakai sarung tangan</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Mengambil satu sarung tangan dengan cara memegang bagian dalam sarung tangan</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Memasang sarung tangan pada tangan kanan atau kiri</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Mengambil sarung tangan satu lagi dengan menggunakan lipatan bagian luar yang tidak kontak langsung dengan kulit tangan</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Memegang bagian luar sarung tangan dengan sarung tangan lainnya, kemudian lepaskan</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>Memegang sarung tangan yang telah dilepas dengan menggunakan tangan yang masih memakai sarung tangan</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>Menyelipkan jari tangan yang sudah tidak memakai sarung tangan di bawah sarung tangan yang belum dilepas di pergelangan tangan</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>Melepas sarung tangan di atas sarung tangan yang pertama</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>Membuang sarung tangan di tempat limbah infeksius</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>Melakukan hand hygiene sesuai prosedur setelah melepas sarung tangan</td>
+                        <td><input type="checkbox" class="dilakukan"></td>
+                        <td><input type="checkbox" class="tidakDilakukan"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="form-group">
+                <label for="tanggal">Tanggal:</label>
+                <input type="text" id="tanggal" name="tanggal">
+            </div>
+            <div class="form-group">
+                <label for="namaSupervisi">Nama Perawat yang melakukan supervisi:</label>
+                <input type="text" id="namaSupervisi" name="namaSupervisi">
+            </div>
+
+            <button type="button" class="button" onclick="calculateScore()">Hitung Skor</button>
+
+            <div class="formula">
+                 <br>
+                SKOR = (Jumlah yang dilakukan / 20) x 100
+            </div>
+
+            <div class="result" id="result">
+                SKOR: 0
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function calculateScore() {
+            const dilakukanCheckboxes = document.querySelectorAll('.dilakukan');
+            const totalItems = 20; // Total item yang ada
+            let countDilakukan = 0;
+
+            dilakukanCheckboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    countDilakukan++;
+                }
+            });
+
+            const score = (countDilakukan / totalItems) * 100;
+            document.getElementById('result').innerText = `SKOR: ${score.toFixed(2)}%`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEMBERIAN OBAT HIGH ALERT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .note {
+            font-style: italic;
+            color: #555;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>PEMBERIAN OBAT HIGH ALERT</h2>
+        <form id="formPemberianObat">
+            <div class="form-group">
+                <label for="namaPerawat">Nama Perawat:</label>
+                <input type="text" id="namaPerawat" name="namaPerawat">
+            </div>
+            <div class="form-group">
+                <label for="nip">NIP:</label>
+                <input type="text" id="nip" name="nip">
+            </div>
+            <div class="form-group">
+                <label for="ruangan">Ruangan:</label>
+                <input type="text" id="ruangan" name="ruangan">
+            </div>
+
+            <table>
+                <tr>
+                    <th>No</th>
+                    <th>Uraian</th>
+                    <th>Dilakukan</th>
+                    <th>Tidak dilakukan</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Mengecek rekam medik pasien untuk memastikan pasien akan mendapatkan instruksi obat High Alert didampingi perawat yang lain</td>
+                    <td><input type="checkbox" id="dilakukan1"></td>
+                    <td><input type="checkbox" id="tidakDilakukan1"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Obat</td>
+                    <td><input type="checkbox" id="dilakukan2"></td>
+                    <td><input type="checkbox" id="tidakDilakukan2"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Swab Alkohol</td>
+                    <td><input type="checkbox" id="dilakukan3"></td>
+                    <td><input type="checkbox" id="tidakDilakukan3"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Dua petugas melakukan identifikasi pada pasien</td>
+                    <td><input type="checkbox" id="dilakukan4"></td>
+                    <td><input type="checkbox" id="tidakDilakukan4"></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Memberikan obat high alert sesuai instruksi oleh dua petugas</td>
+                    <td><input type="checkbox" id="dilakukan5"></td>
+                    <td><input type="checkbox" id="tidakDilakukan5"></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Mengobservasi respon dari pemberian obat</td>
+                    <td><input type="checkbox" id="dilakukan6"></td>
+                    <td><input type="checkbox" id="tidakDilakukan6"></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Mendokumentasikan pemberian obat high alert dengan melingkari jam pemberian menggunakan tinta merah, dan membubuhkan paraf petugas 1 dan petugas 2</td>
+                    <td><input type="checkbox" id="dilakukan7"></td>
+                    <td><input type="checkbox" id="tidakDilakukan7"></td>
+                </tr>
+            </table>
+            <button type="button" class="button" onclick="hitungSkor()">Hitung Skor</button>
+        </form>
+
+        <div class="result">
+            <p id="skor"></p>
+            <p>Tanggal: <span id="tanggal"></span></p>
+            <p>Nama Perawat yang melakukan supervisi: <span id="namaSupervisi"></span></p>
+            <p>(<span id="namaPerawatSupervisi"></span>)</p>
+        </div>
+    </div>
+
+    <script>
+        function hitungSkor() {
+            const dilakukan = [
+                document.getElementById('dilakukan1').checked ? 1 : 0,
+                document.getElementById('dilakukan2').checked ? 1 : 0,
+                document.getElementById('dilakukan3').checked ? 1 : 0,
+                document.getElementById('dilakukan4').checked ? 1 : 0,
+                document.getElementById('dilakukan5').checked ? 1 : 0,
+                document.getElementById('dilakukan6').checked ? 1 : 0,
+                document.getElementById('dilakukan7').checked ? 1 : 0
+            ];
+            const totalDilakukan = dilakukan.reduce((a, b) => a + b, 0);
+            const totalItem = 7;
+            const skor = (totalDilakukan / totalItem) * 100;
+
+            document.getElementById('skor').innerText = `SKOR: ${skor.toFixed(2)}`;
+            document.getElementById('tanggal').innerText = new Date().toLocaleDateString();
+            document.getElementById('namaSupervisi').innerText = document.getElementById('namaPerawat').value;
+            document.getElementById('namaPerawatSupervisi').innerText = document.getElementById('namaPerawat').value;
+        }
+    </script>
+</body>
+</html>

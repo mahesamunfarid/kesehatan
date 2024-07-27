@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulir Memberikan Oksigen</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Formulir Memberikan Oksigen</h2>
+<form>
+    <label for="namaPerawat">Nama Perawat:</label><br>
+    <input type="text" id="namaPerawat" name="namaPerawat"><br><br>
+
+    <label for="nip">NIP:</label><br>
+    <input type="text" id="nip" name="nip"><br><br>
+
+    <label for="ruangan">Ruangan:</label><br>
+    <input type="text" id="ruangan" name="ruangan"><br><br>
+
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Uraian</th>
+            <th>Dilakukan</th>
+            <th>Tidak Dilakukan</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Mengecek rekam medik pasien untuk melihat rencana keperawatan pemberian oksigen pernasal kanul</td>
+            <td><input type="checkbox" name="uraian1_dilakukan"></td>
+            <td><input type="checkbox" name="uraian1_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td colspan="4"><b>Persiapan Alat</b></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Tabung oksigen yang telah berisi oksigen atau saluran oksigen sentral dengan flowmeter siap pakai</td>
+            <td><input type="checkbox" name="uraian2_dilakukan"></td>
+            <td><input type="checkbox" name="uraian2_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Humidifier berisi air steril sampai batas yang telah ditentukan, siap pakai</td>
+            <td><input type="checkbox" name="uraian3_dilakukan"></td>
+            <td><input type="checkbox" name="uraian3_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Nasal kanul</td>
+            <td><input type="checkbox" name="uraian4_dilakukan"></td>
+            <td><input type="checkbox" name="uraian4_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Mengucapkan salam</td>
+            <td><input type="checkbox" name="uraian5_dilakukan"></td>
+            <td><input type="checkbox" name="uraian5_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Memperkenalkan diri</td>
+            <td><input type="checkbox" name="uraian6_dilakukan"></td>
+            <td><input type="checkbox" name="uraian6_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Melakukan hand hygiene sesuai SPO</td>
+            <td><input type="checkbox" name="uraian7_dilakukan"></td>
+            <td><input type="checkbox" name="uraian7_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Mengecek gelang identitas dengan rekam medik pasien<br> *Gelang warna merah muda untuk pasien perempuan<br> *Gelang warna biru muda untuk pasien laki laki</td>
+            <td><input type="checkbox" name="uraian8_dilakukan"></td>
+            <td><input type="checkbox" name="uraian8_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Menjelaskan prosedur tindakan yang akan dilakukan</td>
+            <td><input type="checkbox" name="uraian9_dilakukan"></td>
+            <td><input type="checkbox" name="uraian9_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Mengatur posisi pasien yang nyaman</td>
+            <td><input type="checkbox" name="uraian10_dilakukan"></td>
+            <td><input type="checkbox" name="uraian10_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Mengkaji tanda-tanda hipoksia dan sekret pada jalan nafas</td>
+            <td><input type="checkbox" name="uraian11_dilakukan"></td>
+            <td><input type="checkbox" name="uraian11_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Membersihkan saluran nafas bagian atas dari sekret sesuai prosedur penghisapan lendir</td>
+            <td><input type="checkbox" name="uraian12_dilakukan"></td>
+            <td><input type="checkbox" name="uraian12_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>Mengatur posisi sesuai kondisi pasien</td>
+            <td><input type="checkbox" name="uraian13_dilakukan"></td>
+            <td><input type="checkbox" name="uraian13_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>Menghubungkan nasal kanul dengan sumber oksigen</td>
+            <td><input type="checkbox" name="uraian14_dilakukan"></td>
+            <td><input type="checkbox" name="uraian14_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>Memutar tombol flowmeter untuk menentukan jumlah aliran oksigen permenit sesuai program asuhan keperawatan</td>
+            <td><input type="checkbox" name="uraian15_dilakukan"></td>
+            <td><input type="checkbox" name="uraian15_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>Mengecek pengeluaran oksigen dengan cara merasakan ke kulit punggung pergelangan tangan perawat</td>
+            <td><input type="checkbox" name="uraian16_dilakukan"></td>
+            <td><input type="checkbox" name="uraian16_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>Meletakan ujung kanul pada lubang hidung.</td>
+            <td><input type="checkbox" name="uraian17_dilakukan"></td>
+            <td><input type="checkbox" name="uraian17_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>Mengatur pita elastis atau slang plastik ke kepala atau bawah dagu sampai kanula pas dan nyaman.</td>
+            <td><input type="checkbox" name="uraian18_dilakukan"></td>
+            <td><input type="checkbox" name="uraian18_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>Mengevaluasi respon pasien terhadap tindakan setiap 15 – 30 menit.</td>
+            <td><input type="checkbox" name="uraian19_dilakukan"></td>
+            <td><input type="checkbox" name="uraian19_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>Memberikan reinforceament positif pada pasien</td>
+            <td><input type="checkbox" name="uraian20_dilakukan"></td>
+            <td><input type="checkbox" name="uraian20_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>Memantau kondisi pasien selama tindakan</td>
+            <td><input type="checkbox" name="uraian21_dilakukan"></td>
+            <td><input type="checkbox" name="uraian21_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>Merapikan pasien dan lingkungannya</td>
+            <td><input type="checkbox" name="uraian22_dilakukan"></td>
+            <td><input type="checkbox" name="uraian22_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>23</td>
+            <td>Melakukan hand hygiene sesuai SPO</td>
+            <td><input type="checkbox" name="uraian23_dilakukan"></td>
+            <td><input type="checkbox" name="uraian23_tidak_dilakukan"></td>
+        </tr>
+        <tr>
+            <td>24</td>
+            <td>Mendokumentasian tindakan dan respon pasien</td>
+            <td><input type="checkbox" name="uraian24_dilakukan"></td>
+            <td><input type="checkbox" name="uraian24_tidak_dilakukan"></td>
+        </tr>
+    </table><br>
+
+    <label for="skor">SKOR : Jumlah yang dilakukan dibagi Total Item dikali 100</label><br>
+    <p>* = (Total Skor : 24) x 100</p><br>
+
+    <label for="tanggal">Tanggal:</label><br>
+    <input type="date" id="tanggal" name="tanggal"><br><br>
+
+    <label for="namaSupervisi">Nama Perawat yang melakukan supervisi:</label><br>
+    <input type="text" id="namaSupervisi" name="namaSupervisi"><br><br>
+
+    <input type="submit" value="Hitung Skor">
+</form>
+
+</body>
+</html>
